@@ -14,6 +14,8 @@ root.cssselect("div[class='node']")
 # # Write out to the sqlite database using scraperwiki library
 scraperwiki.sqlite.save(unique_keys=['a'], data={"a":1, "bbb":"Hi there"})
 
+print scraperwiki.sqlite.show_tables()
+
 #
 # # An arbitrary query against the database
 # scraperwiki.sql.select("* from data where 'name'='peter'")
