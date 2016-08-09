@@ -12,7 +12,8 @@ root = lxml.html.fromstring(html)
 root.cssselect("div[class='node']")
 #
 # # Write out to the sqlite database using scraperwiki library
-scraperwiki.sqlite.save(unique_keys=['journal_label'])
+scraperwiki.sqlite.save(unique_keys=['journal_label'], data={"a":1, "bbb":"Hi there"})
+
 #
 # # An arbitrary query against the database
 # scraperwiki.sql.select("* from data where 'name'='peter'")
